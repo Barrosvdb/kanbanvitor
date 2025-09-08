@@ -1,4 +1,4 @@
-package com.daniel.kanban.ui
+package com.vitor.kanban.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.daniel.kanban.R
-import com.daniel.kanban.databinding.FragmentFormTaskBinding
-import com.daniel.kanban.databinding.FragmentRecoverAccountBinding
+import com.vitor.kanban.R
+import com.vitor.kanban.databinding.FragmentFormTaskBinding
 
 
 class FormTaskFragment : Fragment() {

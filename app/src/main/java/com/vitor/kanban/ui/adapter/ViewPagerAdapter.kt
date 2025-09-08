@@ -1,4 +1,4 @@
-package com.daniel.kanban.ui.adapter
+package com.vitor.kanban.ui.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter

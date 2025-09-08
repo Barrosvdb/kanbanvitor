@@ -1,4 +1,4 @@
-package com.daniel.kanban
+package com.vitor.kanban
 
 import org.junit.Test
 

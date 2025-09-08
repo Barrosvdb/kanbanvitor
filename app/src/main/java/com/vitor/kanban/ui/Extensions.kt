@@ -1,10 +1,10 @@
-package com.daniel.kanban.ui
+package com.vitor.kanban.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import com.daniel.kanban.R
-import com.daniel.kanban.databinding.BottomSheetBinding
+import com.vitor.kanban.R
+import com.vitor.kanban.databinding.BottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 fun Fragment.initToolbar(toolbar: Toolbar){

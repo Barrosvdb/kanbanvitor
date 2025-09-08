@@ -1,4 +1,4 @@
-package com.daniel.kanban.ui
+package com.vitor.kanban.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,15 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.daniel.kanban.data.model.Status
-import com.daniel.kanban.databinding.FragmentDoingBinding
-import com.daniel.kanban.data.model.Task
-import com.daniel.kanban.ui.adapter.TaskAdapter
+import com.vitor.kanban.data.model.Status
+import com.vitor.kanban.databinding.FragmentDoneBinding
+import com.vitor.kanban.data.model.Task
+import com.vitor.kanban.ui.adapter.TaskAdapter
 
-class DoingFragment : Fragment() {
+
+class DoneFragment : Fragment() {
 
     private lateinit var taskAdapter: TaskAdapter
-    private var _binding: FragmentDoingBinding? = null
+
+    private var _binding: FragmentDoneBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,7 +25,7 @@ class DoingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDoingBinding.inflate(inflater,container,false)
+        _binding = FragmentDoneBinding.inflate(inflater,container,false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -34,18 +36,10 @@ class DoingFragment : Fragment() {
     }
 
     private fun initRecyclerViewTask() {
-        val taskAdapter = TaskAdapter(requireContext()){ task, option -> optionSelected(task,option)}
-
-        with(binding.recyclerviewTask){
-            layoutManager = LinearLayoutManager(requireContext())
-            setHasFixedSize(true)
-            adapter = taskAdapter
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        val taskAdapter = TaskAdapter(requireContext(),){ task, option -> optionSelected(task,option)}
+        binding.recyclerviewTask.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerviewTask.setHasFixedSize(true)
+        binding.recyclerviewTask.adapter = taskAdapter
     }
 
     private fun optionSelected(task: Task, option: Int) {
@@ -67,27 +61,35 @@ class DoingFragment : Fragment() {
             }
         }
     }
-
     private fun getTask() {
         val taskList = listOf(
-            Task(id = "10", description = "Revisar tela de login", status = Status.DOING),
             Task(
-                id = "11",
-                description = "Ajustar layout da página inicial",
-                status = Status.DOING
+                id = "20",
+                description = "Finalizar a documentação do projeto",
+                status = Status.DONE
             ),
             Task(
-                id = "12",
-                description = "Configurar as permissões do usuário",
-                status = Status.DOING
+                id = "21",
+                description = "Implementar o sistema de notificações",
+                status = Status.DONE
             ),
             Task(
-                id = "13",
-                description = "Testar a funcionalidade de logout",
-                status = Status.DOING
+                id = "22",
+                description = "Publicar a versão inicial na Play Store",
+                status = Status.DONE
             ),
-            Task(id = "14", description = "Otimizar o carregamento de dados", status = Status.DOING)
+            Task(
+                id = "23",
+                description = "Criar a logo oficial do aplicativo",
+                status = Status.DONE
+            ),
         )
         taskAdapter.submitList(taskList)
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

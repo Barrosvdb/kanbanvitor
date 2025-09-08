@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.daniel.kanban"
+    namespace = "com.vitor.kanban"
     compileSdk = 36
 
     defaultConfig {

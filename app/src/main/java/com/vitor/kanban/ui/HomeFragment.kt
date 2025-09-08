@@ -1,13 +1,13 @@
-package com.daniel.kanban.ui
+package com.vitor.kanban.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.daniel.kanban.R
-import com.daniel.kanban.databinding.FragmentHomeBinding
-import com.daniel.kanban.ui.adapter.ViewPagerAdapter
+import com.vitor.kanban.R
+import com.vitor.kanban.databinding.FragmentHomeBinding
+import com.vitor.kanban.ui.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 

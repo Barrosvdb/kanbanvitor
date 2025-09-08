@@ -1,16 +1,14 @@
-package com.daniel.kanban.ui.auth
+package com.vitor.kanban.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.daniel.kanban.R
-import com.daniel.kanban.databinding.FragmentLoginBinding
-import com.daniel.kanban.databinding.FragmentRegisterBinding
-import com.daniel.kanban.ui.showBottomSheet
+import com.vitor.kanban.R
+import com.vitor.kanban.databinding.FragmentLoginBinding
+import com.vitor.kanban.ui.showBottomSheet
 
 
 class LoginFragment : Fragment() {

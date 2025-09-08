@@ -1,4 +1,4 @@
-package com.daniel.kanban.ui.adapter
+package com.vitor.kanban.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.daniel.kanban.R
-import com.daniel.kanban.data.model.Status
-import com.daniel.kanban.databinding.ItemTaskBinding
-import com.daniel.kanban.data.model.Task
+import com.vitor.kanban.R
+import com.vitor.kanban.data.model.Status
+import com.vitor.kanban.databinding.ItemTaskBinding
+import com.vitor.kanban.data.model.Task
 
 class TaskAdapter(
     private val context: Context,

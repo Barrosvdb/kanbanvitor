@@ -1,4 +1,4 @@
-package com.daniel.kanban.ui
+package com.vitor.kanban.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.daniel.kanban.R
-import com.daniel.kanban.data.model.Status
-import com.daniel.kanban.databinding.FragmentTodoBinding
-import com.daniel.kanban.data.model.Task
-import com.daniel.kanban.ui.adapter.TaskAdapter
+import com.vitor.kanban.R
+import com.vitor.kanban.data.model.Status
+import com.vitor.kanban.databinding.FragmentTodoBinding
+import com.vitor.kanban.data.model.Task
+import com.vitor.kanban.ui.adapter.TaskAdapter
 
 
 class TodoFragment : Fragment() {
