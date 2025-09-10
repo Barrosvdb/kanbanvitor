@@ -51,19 +51,19 @@ class DoingFragment : Fragment() {
     private fun optionSelected(task: Task, option: Int) {
         when (option) {
             TaskAdapter.SELECT_REMOVER -> {
-                Toast.makeText(requireContext(), "Removendo ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Remove ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_EDIT -> {
-                Toast.makeText(requireContext(), "Editando ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Edita ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_DETAILS -> {
-                Toast.makeText(requireContext(), "Detalhes ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Detalhe ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_NEXT -> {
-                Toast.makeText(requireContext(), "Movendo para Feito: ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Movendo done: ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_BACK -> {
-                Toast.makeText(requireContext(), "Movendo para A Fazer: ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Movendo to-do: ${task.description}", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -73,20 +73,20 @@ class DoingFragment : Fragment() {
             Task(id = "10", description = "Revisar tela de login", status = Status.DOING),
             Task(
                 id = "11",
-                description = "Ajustar layout da página inicial",
+                description = "upar projeto no github",
                 status = Status.DOING
             ),
             Task(
                 id = "12",
-                description = "Configurar as permissões do usuário",
+                description = "Criar crud da tela de login",
                 status = Status.DOING
             ),
             Task(
                 id = "13",
-                description = "Testar a funcionalidade de logout",
+                description = "terminar código php",
                 status = Status.DOING
             ),
-            Task(id = "14", description = "Otimizar o carregamento de dados", status = Status.DOING)
+            Task(id = "14", description = "incluir tela de cadastro", status = Status.DOING)
         )
         taskAdapter.submitList(taskList)
     }

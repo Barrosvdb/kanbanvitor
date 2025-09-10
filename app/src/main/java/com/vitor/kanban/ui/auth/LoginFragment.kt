@@ -49,7 +49,6 @@ class LoginFragment : Fragment() {
 
         if (email.isNotBlank()) {
             if (senha.isNotBlank()) {
-                //Comentário temporário somente para testar a validação dos dados
                 findNavController().navigate(R.id.action_global_homeFragment)
             } else {
                 showBottomSheet(message =  getString(R.string.password_empty))
