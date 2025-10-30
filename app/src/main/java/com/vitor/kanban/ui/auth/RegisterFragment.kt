@@ -37,10 +37,10 @@ class RegisterFragment : Fragment() {
             if (senha.isNotBlank()) {
                 Toast.makeText(requireContext(), "Tudo OK!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(requireContext(), "Preencha uma senha!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "senha", Toast.LENGTH_SHORT).show()
             }
         } else {
-            Toast.makeText(requireContext(), "Preencha um email válido!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "email", Toast.LENGTH_SHORT).show()
         }
     }
 

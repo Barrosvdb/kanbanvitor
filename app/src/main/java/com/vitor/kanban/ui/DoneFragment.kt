@@ -36,7 +36,7 @@ class DoneFragment : Fragment() {
     }
 
     private fun initRecyclerViewTask() {
-        val taskAdapter = TaskAdapter(requireContext(),){ task, option -> optionSelected(task,option)}
+        taskAdapter = TaskAdapter(requireContext(),){ task, option -> optionSelected(task,option)}
         binding.recyclerviewTask.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerviewTask.setHasFixedSize(true)
         binding.recyclerviewTask.adapter = taskAdapter
@@ -54,10 +54,10 @@ class DoneFragment : Fragment() {
                 Toast.makeText(requireContext(), "Detalhes ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_NEXT -> {
-                Toast.makeText(requireContext(), "Movendo para Feito: ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Movendo para done: ${task.description}", Toast.LENGTH_SHORT).show()
             }
             TaskAdapter.SELECT_BACK -> {
-                Toast.makeText(requireContext(), "Movendo para A Fazer: ${task.description}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Movendo para A to-do: ${task.description}", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -65,22 +65,22 @@ class DoneFragment : Fragment() {
         val taskList = listOf(
             Task(
                 id = "20",
-                description = "Finalizar a documentação do projeto",
+                description = "Prototipar as telas web",
                 status = Status.DONE
             ),
             Task(
                 id = "21",
-                description = "Implementar o sistema de notificações",
+                description = "Inclusão com o banco de dados(firebase)",
                 status = Status.DONE
             ),
             Task(
                 id = "22",
-                description = "Publicar a versão inicial na Play Store",
+                description = "aplicar api de localização",
                 status = Status.DONE
             ),
             Task(
                 id = "23",
-                description = "Criar a logo oficial do aplicativo",
+                description = "relatorizar para o scrummaster",
                 status = Status.DONE
             ),
         )

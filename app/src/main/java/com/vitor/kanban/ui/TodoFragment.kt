@@ -74,11 +74,11 @@ class TodoFragment : Fragment() {
 
     private fun getTask() {
         val taskList = listOf(
-            Task(id = "5", description = "Escrever testes de unidade para a API de login", status = Status.TODO),
-            Task(id = "6", description = "Desenhar a interface do usuário para a tela de configurações", status = Status.TODO),
-            Task(id = "7", description = "Configurar o banco de dados de desenvolvimento", status = Status.TODO),
-            Task(id = "8", description = "Refatorar o código do serviço de autenticação", status = Status.TODO),
-            Task(id = "9", description = "Criar o manual do usuário para o app", status = Status.TODO),
+            Task(id = "5", description = "confirmar utilização da funcionalidade de soma", status = Status.TODO),
+            Task(id = "6", description = "aplicar padrão ux na tela de home", status = Status.TODO),
+            Task(id = "7", description = "mudar botão de conexão", status = Status.TODO),
+            Task(id = "8", description = "excluir usuários não funcionais do banco de dados", status = Status.TODO),
+            Task(id = "9", description = "aplicar notificação de adm", status = Status.TODO),
         )
         taskAdapter.submitList(taskList)
     }
