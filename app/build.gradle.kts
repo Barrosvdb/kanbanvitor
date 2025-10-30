@@ -9,7 +9,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.vitor.kanban"
+        applicationId = "com.daniel.kanban"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
